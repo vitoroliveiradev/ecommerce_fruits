@@ -1,0 +1,207 @@
+{
+  "products": [
+    {
+      "id": 2415,
+      "name": "Laranja",
+      "price": "9.99",
+      "qtd": "200",
+      "img": "src/assets/images/laranja.png"
+    },
+    {
+      "id": 2416,
+      "name": "Limão",
+      "price": "19.99",
+      "qtd": "200",
+      "img": "src/assets/images/limao.png"
+    },
+    {
+      "id": 2417,
+      "name": "Melância",
+      "price": "29.99",
+      "qtd": "200",
+      "img": "src/assets/images/melancia.png"
+    },
+    {
+      "id": 2418,
+      "name": "Melão",
+      "price": "19.99",
+      "qtd": "200",
+      "img": "src/assets/images/melao.png"
+    },
+    {
+      "id": 2419,
+      "name": "Maçã",
+      "price": "8.99",
+      "qtd": "200",
+      "img": "src/assets/images/maca.png"
+    },
+    {
+      "id": 2420,
+      "name": "Mamão",
+      "price": "7.99",
+      "qtd": "200",
+      "img": "src/assets/images/mamao.png"
+    },
+    {
+      "id": 2421,
+      "name": "Morango",
+      "price": "6.99",
+      "qtd": "200",
+      "img": "src/assets/images/morango.png"
+    },
+    {
+      "id": 2422,
+      "name": "Ameixa",
+      "price": "4.99",
+      "qtd": "200",
+      "img": "src/assets/images/ameixa.png"
+    },
+    {
+      "id": 2423,
+      "name": "Pêra",
+      "price": "3.99",
+      "qtd": "200",
+      "img": "src/assets/images/pera.png"
+    },
+    {
+      "id": 2424,
+      "name": "Mexerica",
+      "price": "2.99",
+      "qtd": "200",
+      "img": "src/assets/images/mexerica.png"
+    },
+    {
+      "id": 2425,
+      "name": "Abacaxi",
+      "price": "7.99",
+      "qtd": "200",
+      "img": "src/assets/images/abacaxi.png"
+    },
+    {
+      "id": 2426,
+      "name": "Abacate",
+      "price": "6.29",
+      "qtd": "200",
+      "img": "src/assets/images/abacate.png"
+    },
+    {
+      "id": 2427,
+      "name": "Uva",
+      "price": "12.99",
+      "qtd": "200",
+      "img": "src/assets/images/uva.png"
+    },
+    {
+      "id": 2428,
+      "name": "Goiaba",
+      "price": "5.29",
+      "qtd": "200",
+      "img": "src/assets/images/goiaba.png"
+    },
+    {
+      "id": 2429,
+      "name": "Kiwi",
+      "price": "3.19",
+      "qtd": "200",
+      "img": "src/assets/images/kiwi.png"
+    },
+    {
+      "id": 2430,
+      "name": "Manga",
+      "price": "6.00",
+      "qtd": "200",
+      "img": "src/assets/images/manga.png"
+    },
+    {
+      "id": 2431,
+      "name": "Maracujá",
+      "price": "11.99",
+      "qtd": "200",
+      "img": "src/assets/images/maracuja.png"
+    },
+    {
+      "id": 2432,
+      "name": "Pêssego",
+      "price": "5.99",
+      "qtd": "200",
+      "img": "src/assets/images/pessego.png"
+    },
+    {
+      "id": 2433,
+      "name": "Alface",
+      "price": "2.99",
+      "qtd": "200",
+      "img": "src/assets/images/alface.png"
+    },
+    {
+      "id": 2434,
+      "name": "Repolho",
+      "price": "3.99",
+      "qtd": "200",
+      "img": "src/assets/images/repolho.png"
+    },
+    {
+      "id": 2435,
+      "name": "Espinafre",
+      "price": "4.99",
+      "qtd": "200",
+      "img": "src/assets/images/espinafre.png"
+    },
+    {
+      "id": 2436,
+      "name": "Couve",
+      "price": "4.99",
+      "qtd": "200",
+      "img": "src/assets/images/couve.png"
+    },
+    {
+      "id": 2437,
+      "name": "Couve-Flor",
+      "price": "5.99",
+      "qtd": "200",
+      "img": "src/assets/images/couve-flor.png"
+    },
+    {
+      "id": 2438,
+      "name": "Brócolis",
+      "price": "7.99",
+      "qtd": "200",
+      "img": "src/assets/images/brocolis.png"
+    },
+    {
+      "id": 2439,
+      "name": "Agrião",
+      "price": "4.99",
+      "qtd": "200",
+      "img": "src/assets/images/agriao.png"
+    },
+    {
+      "id": 2440,
+      "name": "Rúcula",
+      "price": "3.99",
+      "qtd": "200",
+      "img": "src/assets/images/rucula.png"
+    },
+    {
+      "id": 2441,
+      "name": "Acelga",
+      "price": "5.99",
+      "qtd": "200",
+      "img": "src/assets/images/acelga.png"
+    },
+    {
+      "id": 2442,
+      "name": "Coentro",
+      "price": "2.99",
+      "qtd": "200",
+      "img": "src/assets/images/coentro.png"
+    },
+    {
+      "id": 2443,
+      "name": "Alcachofra",
+      "price": "10.99",
+      "qtd": "200",
+      "img": "src/assets/images/alcachofra.png"
+    }
+  ]
+}
