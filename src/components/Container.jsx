@@ -1,4 +1,7 @@
-import styled from "styled-components"
+import styled, {keyframes} from "styled-components";
+import { fadeIn } from "react-animations";
+
+const animation = keyframes`${fadeIn}`;
 
 const Container = ({ children }) => {
   return (
@@ -16,6 +19,7 @@ const Box = styled.div`
   max-width: 80%;
   margin: 0 auto;
   padding: 1.5rem;
+  animation: 1s ${animation}
 `
 
 export default Container

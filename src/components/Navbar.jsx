@@ -1,32 +1,41 @@
 import styled from "styled-components";
 import LogoImg from "../assets/images/logo.jpg";
 import { Link } from "react-router-dom";
+import { useAuthValue } from "../context/AuthContext";
+import { useAuthentication } from "../hooks/useAuthentication";
 
 const Navbar = () => {
+  const { user } = useAuthValue();
+  const { logout } = useAuthentication();
+
   return (
     <Nav>
-      <Link to="/">
+      <Link to="/products">
         <Logo src={LogoImg} alt="Logo do site" />
       </Link>
       <List>
         <ItemList>
-          <Link to="/">
-            Home
-          </Link>
-        </ItemList>
-        <ItemList>
-          <Link to="/login">
-            Entrar
-          </Link>
-        </ItemList>
-        <ItemList>
-          <Link to="/register">
-            Cadastrar
-          </Link>
-        </ItemList>
-        <ItemList>
           <Link to="/products">
             Produtos
+          </Link>
+        </ItemList>
+        {!user && (
+          <>
+            <ItemList>
+              <Link to="/login">
+                Entrar
+              </Link>
+            </ItemList>
+            <ItemList>
+              <Link to="/register">
+                Cadastrar
+              </Link>
+            </ItemList>
+          </>
+        )}
+        <ItemList>
+          <Link to="/myproducts">
+            Meus Produtos
           </Link>
         </ItemList>
         <ItemList>
@@ -34,6 +43,16 @@ const Navbar = () => {
             Sobre
           </Link>
         </ItemList>
+        {user && (
+          <ItemList>
+            <button 
+              className="logout"
+              onClick={logout}
+            >
+              Sair
+            </button>
+        </ItemList>
+        )}
       </List>
     </Nav>
   )
@@ -59,6 +78,7 @@ const Logo = styled.img `
   &:hover {
     transform: scale(1.03) ;
   }
+  outline: none;
 `
 
 const List = styled.ul`
@@ -67,7 +87,7 @@ const List = styled.ul`
   list-style: none;
 `
 const ItemList = styled.li`
-  a {
+  a, .logout {
     margin: 0 .5rem;
     font-size: .9rem;
     text-decoration: none;
@@ -81,6 +101,19 @@ const ItemList = styled.li`
   a:hover {
     background-color: #FFF;
     color: #000;
+  }
+
+  .logout {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: block;
+    margin: 0 1rem;
+    box-sizing: content-box;
+  }
+
+  .logout:hover {
+    color: red;
   }
 `
 

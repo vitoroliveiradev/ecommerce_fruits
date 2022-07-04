@@ -1,5 +1,6 @@
 // Styled Components
 import styled from 'styled-components';
+import Loading  from "../../assets/loading.svg";
 
 // Hooks
 import { useParams, useNavigate } from 'react-router-dom'
@@ -36,13 +37,13 @@ const ProductDetail = () => {
     }
     
     console.log(listProducts)
-    navigate(`/products/cart/`);
+    navigate(`/myproducts/cart/`);
   }
 
   return (
     <Container>
       <Product>
-        {loading && <p className="loading">Carregando Produto...</p>}
+        {loading && <img src={Loading} alt="Página em estado de carregamento" /> }
         {error && <p>{error}</p>}
         {product && (
           <>

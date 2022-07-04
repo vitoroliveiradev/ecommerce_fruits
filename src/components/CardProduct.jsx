@@ -8,7 +8,7 @@ const CardProduct = ({ item }) => {
       <img src={item.img} alt="teste" />
       <p>R$ <span>{item.price}</span>.</p>
         <ButtonDetail>
-          <Link to={`/products/${item.id}`}>
+          <Link to={`/myproducts/${item.id}`}>
             Ver Detalhes
           </Link>
         </ButtonDetail>

@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+import { fadeIn } from "react-animations";
+import { useNavigate } from "react-router-dom";
+
 import { useAuthentication } from "../../hooks/useAuthentication";
 const Register = () => {
   const [name, setName] = useState("");
@@ -8,28 +11,21 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const { auth, createUser, error: authError, loading } = useAuthentication();
-
-  const clearInputs = () => {
-    setName("");
-    setEmail("");
-    setConfirmEmail("");
-    setPassword("");
-    setConfirmPassword("");
-  }
+  console.log(authError);
 
   useEffect(() => {
-    setError("");
     if(authError) {
       setError(authError);
     }
-
-    console.log(error);
   }, [authError])
 
   const handleSubmit = async e => {
     e.preventDefault();
+
+    setError("");
 
     const user = {
       email,
@@ -41,9 +37,16 @@ const Register = () => {
       return;
     }
 
+    if(email !== confirmEmail) {
+      setError("Os e-mails precisam ser iguais!");
+      return;
+    }
+
     const res = await createUser(user);
 
-    clearInputs();
+    console.log(res);
+
+    // navigate("/");
   }
 
   return (
@@ -126,6 +129,8 @@ const Register = () => {
   )
 }
 
+const fade = keyframes`${fadeIn}`;
+
 const RegisterContainer = styled.div`
   h1 {
     margin: 1rem 0;
@@ -140,6 +145,7 @@ const RegisterContainer = styled.div`
     padding: 1rem;
     box-shadow: 0px 10px 13px -7px #000000;
     border-radius: 4px;
+    animation: 1s ${fade};
 
     h2 {
       text-align: center;
@@ -192,6 +198,7 @@ const RegisterContainer = styled.div`
       background-color: #CCC;
       cursor: not-allowed;
     }
+    animation: 1s ${fade};
   }
     
 `
@@ -207,5 +214,6 @@ const ErrorMessage = styled.div`
   font-weight: normal;
   transition: all .2s linear;
 `
+
 
 export default Register;
